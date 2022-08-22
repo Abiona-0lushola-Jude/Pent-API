@@ -15,6 +15,18 @@ Content-Type: application/json
 
 
 ###
+GET  http://localhost:5001/Pent/user
+
+
+
+
+###
+DELETE  http://localhost:5001/Pent/user/delete/63033b70cdbbfafae476f421
+
+
+
+
+###
 POST http://localhost:5001/Pent/post/review
 Content-Type: application/json
 
