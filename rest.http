@@ -1,0 +1,30 @@
+GET  http://localhost:5001/Pent
+
+
+
+###
+POST http://localhost:5001/Pent/post
+Content-Type: application/json
+
+{
+    "name":"olushola",
+    "email":"example@email",
+    "username":"Gbenga",
+    "phoneNumber":"38393038"
+}
+
+
+###
+POST http://localhost:5001/Pent/post/review
+Content-Type: application/json
+
+{
+    "username":"",
+    "landlordReview":"",
+    "EnvironmentReview":"",
+    "QualityofAmentities":"",
+    "file":"",
+}
+ 
+
+
