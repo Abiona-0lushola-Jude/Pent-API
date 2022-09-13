@@ -9,7 +9,7 @@ const reviewSchema = mongoose.Schema({
         type:String,
    },
    EnvironmentReview:{
-    type:String,
+         type:String,
     },
     QualityofAmentities:{
         type:String
@@ -18,7 +18,7 @@ const reviewSchema = mongoose.Schema({
         data: Buffer,
         contentType: String,
     },
-      uploadTime: {
+    uploadTime: {
         type: Date,
         default: Date.now,
     },

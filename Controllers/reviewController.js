@@ -32,7 +32,7 @@ module.exports = {
     deleteReview: async(req,res)=>{
         try {
             const reviewDeleted = await review.findByIdAndDelete({_id:req.params.id}) 
-            res.json(reviewDeleted, {message: `review made id ${req.params.id} has been deleted`})
+            res.json(reviewDeleted)
         } catch (err) {
             res.json({message: err.message})
         }

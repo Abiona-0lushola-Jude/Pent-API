@@ -21,7 +21,7 @@ GET  http://localhost:5001/Pent/user
 
 
 ###
-DELETE  http://localhost:5001/Pent/user/delete/63033b70cdbbfafae476f421
+DELETE  http://localhost:5001/Pent/user/delete/6320da0e8c3dadbce0715e66
 
 
 
@@ -31,13 +31,18 @@ POST http://localhost:5001/Pent/post/review
 Content-Type: application/json
 
 {
-    "username":"abiona",
-    "landlordReview":"rude",
-    "EnvironmentReview":"not clean",
-    "QualityofAmentities":"bad",
-    "file":"",
+    "username":"olushola",
+    "landlordReview":"req.body.landlordReview",
+    "EnvironmentReview":"req.body.EnvironmentReview",
+    "QualityofAmentities":"req.body.QualityofAmentities",
+    "file":""
 }
  
 ###
 GET  http://localhost:5001/Pent/review
 
+
+
+
+###
+DELETE http://localhost:5001/Pent/review/delete/6320dc692c590eb77310fc58
