@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const user = require('../ModelSchema/userModel')
-const review = require('../ModelSchema/reviewSchema')
+const reviewController = require('../Controllers/reviewController')
 
 router.get('/user',async (req,res)=>{
     try {
@@ -42,41 +42,13 @@ router.delete('/user/delete/:id', async(req,res)=>{
 
 
 // posting reviews 
-router.post('/post/review',async (req,res)=>{
-    try {
-        const newReview = new review({
-            username:req.body.username,
-           landlordReview:req.body.landlordReview,
-           EnvironmentReview:req.body.EnvironmentReview,
-            QualityofAmentities:req.body.QualityofAmentities,
-            file:"",
-        })
-        await newReview.save()
-        res.json(newReview)
-    } catch (err) {
-        res.json({message: err.message})
-    }
-})
+router.post('/post/review', reviewController.postReview)
 
 // getting all reviews
-router.get('/review', async (req,res)=>{
-    try {
-        const allReview = await review.find().sort({uploadTime:'desc'})
-        res.json(allReview)
-    } catch (err) {
-        res.json({message: err.message})
-    }
-})
+router.get('/review', reviewController.getAllReview)
 
 // deleting oneReview
-router.delete('/review/delete/:id', async(req,res)=>{
-    try {
-        const reviewDeleted = await review.findByIdAndDelete({_id:req.params.id}) 
-        res.json(reviewDeleted, {message: `review made id ${req.params.id} has been deleted`})
-    } catch (err) {
-        res.json({message: err.message})
-    }
-})
+router.delete('/review/delete/:id', reviewController.deleteReview)
 
 
 

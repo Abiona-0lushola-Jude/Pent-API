@@ -13,7 +13,7 @@ app.use(express.urlencoded({extended:false}))
 // Connecting MongoDb
 const connectionString = process.env.USER_URL
 const connectionStringReview = process.env.REVIEW_URL
-mongoose.connect(connectionString,()=> console.log('User Database is  on..'))
+// mongoose.connect(connectionString,()=> console.log('User Database is  on..'))
 mongoose.connect(connectionStringReview,()=> console.log('Review Database is  on..'))
 
 // Adding Router middleware
