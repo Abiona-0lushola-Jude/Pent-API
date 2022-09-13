@@ -31,12 +31,12 @@ Users should be able to:
 
 ### Screenshot
 
+![Screenshot (187)](https://user-images.githubusercontent.com/103720345/185874586-58e73681-ac2d-4556-a39f-60f2db724106.png)
 
 
 ### Links
 
 - Solution URL: [Github URL here]
-- Live Site URL: [ live site URL here](https://your-live-site-url.com)
 
 ## My process
 
